@@ -1,0 +1,56 @@
+Aqui estão as respostas para a atividade de Melhorias e refatoração de código em Kotlin, seguindo o formato solicitado:
+
+Quais problemas você identificou no código original?
+O código apresenta falta de clareza e organização modular. A lógica está concentrada em uma única função, violando o princípio de responsabilidade única, e utiliza strings fixas ("hardcoded") para os status, o que facilita erros de digitação e dificulta a manutenção.
++1
+
+Como a refatoração melhorou a organização e legibilidade do código?
+A refatoração torna o código mais legível ao eliminar duplicações e organizar a lógica de forma modular. Ao separar as responsabilidades, cada parte do código passa a ter uma função clara, facilitando a leitura e o entendimento do fluxo de processamento.
++4
+
+Quais padrões de design foram aplicados e por quê?
+Foi aplicado o padrão Strategy para lidar com os diferentes tipos de pedidos, permitindo que cada status tenha sua própria lógica de execução de forma independente. Também foi aplicado o Single Responsibility Principle (SRP) para separar as responsabilidades de verificação e processamento, garantindo que a classe não faça mais do que o necessário.
++2
+
+Como essas mudanças impactam a manutenção e escalabilidade do código no longo prazo?
+Essas mudanças garantem que o código seja mais escalável e manutenível. Com a lógica modularizada, adicionar um novo status de pedido não exige alterar o código existente (evitando bugs), apenas criar uma nova estratégia, o que torna o sistema muito mais flexível para crescer.
++4
+
+Quais boas práticas foram aplicadas durante a refatoração?
+Foram aplicadas a eliminação de duplicações, a melhoria da organização interna e a aplicação de padrões de design. Além disso, o foco foi melhorar a estrutura interna sem alterar o comportamento externo, garantindo um código mais eficiente e limpo.
++2
+
+Código Refatorado (Exemplo Kotlin):
+
+Kotlin
+// Definição de tipos para evitar strings fixas
+enum class StatusPedido { NOVO, PROCESSADO, DESCONHECIDO }
+
+// Aplicação do SRP: Cada classe tem uma responsabilidade
+interface PedidoStrategy {
+    fun executar(pedidoId: Int)
+}
+
+class ProcessarNovo : PedidoStrategy {
+    override fun executar(pedidoId: Int) {
+        println("Pedido em processamento: $pedidoId")
+    }
+}
+
+class ProcessarJaConcluido : PedidoStrategy {
+    override fun executar(pedidoId: Int) {
+        println("Pedido já processado: $pedidoId")
+    }
+}
+
+class PedidoProcessor {
+    fun processarPedido(pedido: Pedido) {
+        // Uso de Strategy para eliminar o 'when' complexo e melhorar escalabilidade
+        val acao = when (pedido.status) {
+            StatusPedido.NOVO -> ProcessarNovo()
+            StatusPedido.PROCESSADO -> ProcessarJaConcluido()
+            else -> null
+        }
+        acao?.executar(pedido.id) ?: println("Status desconhecido: ${pedido.id}")
+    }
+}

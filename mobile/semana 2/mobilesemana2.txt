@@ -1,0 +1,9 @@
+Qual é a função de um Fragment em um aplicativo Android?
+
+R: Sua função é representar uma parte modular da interface do usuário dentro de uma Activity, permitindo dividir a tela em componentes menores e independentes.
+
+Como o Fragment se integra à Activity no projeto?
+R: Ele é inserido em um local específico do layout da Activity (como um FrameLayout) e gerenciado através do código Java ou Kotlin utilizando o FragmentManager
+
+Por que você usaria um Fragment em vez de apenas uma Activity? 
+R: Para criar interfaces mais flexíveis, reutilizáveis e fáceis de adaptar a diferentes tamanhos de tela (como tablets e celulares), sem precisar trocar de tela inteira

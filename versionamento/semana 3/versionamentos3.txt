@@ -1,0 +1,15 @@
+use EscolaDB
+
+db.createCollection("clientes")
+
+db.clientes.insertOne({
+  nome: "João Silva",
+  matricula: "2025001",
+  data_nascimento: "2005-04-23",
+  curso_principal: "Informática",
+  interesses: ["programação", "jogos", "música"],
+  contato: {
+    email: "joao@email.com",
+    telefone: "11999999999"
+  }
+})

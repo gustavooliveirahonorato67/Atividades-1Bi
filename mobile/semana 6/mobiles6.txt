@@ -1,0 +1,15 @@
+Qual abordagem você utilizaria para gerenciar a sincronização das mensagens em background? Justifique sua escolha com base nos recursos da plataforma (Android ou iOS). Eu utilizaria a biblioteca WorkManager da plataforma Android. Justifico essa escolha porque ela é a solução recomendada para tarefas que precisam ser executadas com garantia, mesmo que o aplicativo seja fechado ou o dispositivo reiniciado. Além disso, ela gerencia inteligentemente a bateria e permite agendar tarefas periódicas de sincronização de forma eficiente.
+
+Como você garantiria que a sincronização não afete negativamente a performance do aplicativo? Para garantir a performance, eu configuraria restrições (Constraints) no WorkManager para que a sincronização ocorra apenas quando o dispositivo estiver conectado ao Wi-Fi ou carregando. Além disso, a execução seria feita em uma thread separada (background thread), evitando que o processamento de dados trave a interface principal (Main Thread) do usuário.
+
+Quais medidas você tomaria para lidar com falhas na conexão durante a sincronização? Eu implementaria uma estratégia de "Backoff exponencial", que faz com que o aplicativo tente sincronizar novamente após um tempo caso a conexão falhe, aumentando o intervalo entre as tentativas. Também utilizaria verificações de conectividade antes de iniciar a tarefa, garantindo que o processo só comece quando houver rede disponível.
+
+Elabore um relatório que responda aos questionamentos anteriores.
+
+Relatório de Implementação: Sincronização em Segundo Plano
+
+Para o desenvolvimento do aplicativo de mensagens, a estratégia de sincronização será baseada na API WorkManager do Android. Esta abordagem foi escolhida por sua robustez e capacidade de garantir a entrega das mensagens sem comprometer a estabilidade do sistema operacional.
+
+A performance será preservada através do uso de threads assíncronas e restrições de execução que evitam o consumo excessivo de dados móveis e bateria em momentos críticos. Em caso de instabilidade de rede, o sistema contará com mecanismos de reentrada automática, garantindo que nenhuma mensagem seja perdida e que o aplicativo recupere o estado de sincronização assim que a conexão for restabelecida.
+
+Essa estrutura garante um aplicativo responsivo, confiável e alinhado com as melhores práticas de desenvolvimento mobile atuais.

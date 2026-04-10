@@ -1,0 +1,10 @@
+Gabriel Alves Costa Dias
+
+Gustavo Oliveira Honorato
+Jhonata Carvalho
+
+Opção A: Transformer, porque é mais versátil e multimodal.
+
+Opção B: Conforme na tabela.
+
+Opção C: VAE-GAN por ter baixo custo de hardware e eficiência de treinamento.

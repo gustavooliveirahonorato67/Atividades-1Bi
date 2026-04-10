@@ -1,0 +1,11 @@
+1.Qual é a importância de usar repositórios remotos, como GitHub ou GitLab, em projetos colaborativos?
+
+R: Eles funcionam mais ou menos tipo como o "ponto de encontro" oficial do código, sem eles, teria que ficar mandando arquivos por email e pendrive. Além de também servirem como um backup seguro, eles permitem que varias pessoas trabalhem no mesmo arquivo sem sobreescrever o que.
+
+2. Como o comando git pull facilita a colaboração em um projeto? 
+
+Esse comando é o que te mantém "na mesma pagina" que o resto do time (ou sua equipe). Ele baixa as novidades que seus colegas enviarem e as mescla com o que você tá fazendo. Ela evita que você perca tempo trabalhando em cima de uma versão velha do projeto.
+
+3. Por que é importante realizar frequentemente o push de alterações para um repositório remoto?
+
+O push frequente é o "salvamento na nuvem" que garante que o código não suma se o PC pifar e mantém o resto do time atualizado com o que foi feito. Ele evita de ter que resolver mil problemas de uma vez só no final do dia ou da semana.

@@ -1,0 +1,49 @@
+CREATE TABLE produtos (
+    id_produto INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(10, 2) NOT NULL,
+    estoque INT DEFAULT 0,
+    categoria VARCHAR(50)
+);
+
+CREATE TABLE clientes (
+    id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    sobrenome VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    endereco TEXT,
+    telefone VARCHAR(20)
+);
+
+CREATE TABLE pedidos (
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT,
+    data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
+    status_pedido VARCHAR(20) DEFAULT 'Processando',
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
+);
+
+CREATE TABLE itens_pedido (
+    id_item INT AUTO_INCREMENT PRIMARY KEY,
+    id_pedido INT,
+    id_produto INT,
+    quantidade INT NOT NULL,
+    preco_unitario DECIMAL(10, 2) NOT NULL,
+    FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido) ON DELETE CASCADE,
+    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
+);
+
+INSERT INTO produtos (nome, descricao, preco, estoque, categoria)
+VALUES ('Teclado', 'Branco', 300.00, 20, 'Periféricos');
+INSERT INTO clientes (nome, sobrenome, email, endereco, telefone)
+VALUES ('Carlos', 'Alberto', 'carlosalberto@email.com', 'Rua B, 321', '11999999999');
+
+INSERT INTO pedidos (id_cliente) VALUES (1);
+INSERT INTO itens_pedido (id_pedido, id_produto, quantidade, preco_unitario) VALUES (1, 1, 2, 250.00);
+
+UPDATE produtos SET preco = 200.00 WHERE id_produto = 1;
+
+DELETE FROM produtos WHERE id_produto = 2;
+
+SELECT * FROM produtos;

@@ -1,0 +1,6 @@
+A escolha ideal pro EduTech é o GitHub. Ele centraliza o CI/CD, revisão de código e documentação em um só lugar, também se integrando perfeitamente ao VS Code que o time dele já utiliza. Com um custo de 4 dólares por usuário, a equipe atual gasta apenas metade do orçamento de 500 reais, assim mantendo a viabilidade financeira mesmo quando o número de funcionários dobrar no próximo ano.
+
+Slide 16
+
+Projeto A: Deve ser privado para proteger os dados biométricos e financeiros contra vazamentos e fraudes. Embora seja difícil mudar pro modelo público no futuro por causa das normas da LGPD, a segurança é garantida com a criptografia e o controle de acesso.
+Projeto B: Deve ser público para gerar portfólio, mas apesar do risco de vulnerabilidades expostas, é possível migrar para um modelo privado ou comercial depois. A segurança deve focar em análise de código e revisão de contribuições para evitar bugs e os códigos maliciosos.

@@ -1,0 +1,13 @@
+Relatório
+
+A lógica consiste em capturar o clique do usuário no item da lista e utilizar uma Intent para iniciar a Activity de detalhes, anexando o ID do produto através do método putExtra. Na tela de detalhes, recupera-se esse ID utilizando getIntent().getExtras() para realizar a busca das informações completas em uma lista ou banco de dados e exibi-las na interface 
+
+Assunto Estratégia de implementação e padronização técnica - Catálogo de Produtos
+
+Prezada liderança técnica,
+
+Gostaríamos de formalizar a estratégia adotada para a navegação entre a listagem e os detalhes de produtos em nosso aplicativo. Optamos por uma arquitetura baseada em Fragments e passagem de parâmetros via IDs únicos.
+
+Ressaltamos que essa escolha prioriza a modularização do código, facilitando a manutenção a longo prazo e permitindo que a interface seja adaptável para diferentes dispositivos sem perda de performance. Acreditamos que seguir essas boas práticas de desenvolvimento Android é fundamental para garantir a escalabilidade do projeto e a alta qualidade da entrega final.
+
+Atenciosamente, Grupo de Desenvolvimento.

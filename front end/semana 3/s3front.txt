@@ -1,0 +1,154 @@
+1. display: grid
+Essa propriedade transforma o elemento pai em uma grade. Ela permite que de pra dividir o layout em linhas e colunas, funcionando como uma tabela invisível que organiza onde cada bloco do site deve ficar.
+
+
+2. grid-template-areas
+Ela permite que nomeie as áreas do layout (como menu e cabecalho). É como se criasse um mapa visual com as palavras, facilitando muito o entendimento de onde cada parte do site tá posicionada.
+
+3. align-items: center
+Usada dentro de um display: flex, essa propriedade alinha os elementos verticalmente ao centro. No cabeçalho, ela garante que o título e o botão fiquem perfeitamente alinhados na mesma linha, sem um ficar mais alto que o outro.
+
+
+4. transition: background-color 0.3s
+Ela define o tempo que uma mudança leva para acontecer. Quando você passa o mouse no botão, em vez de a cor mudar instantaneamente, ela leva 0.3 segundos para se transformar, criando um efeito visual menos seco e mais suave.
+
+5. @media (max-width: 768px)
+Essa é a base do design responsivo. Ela cria uma regra que só é ativada quando a tela é menor que 768 pixels (como em celulares). Nesse caso ai do exercício, ela foi usada pra esconder o menu lateral e empilhar o conteúdo para caber em telas mais pequenas.
+
+Html e CSS
+
+HTML:
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Registro - semana 3&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;aside class=&quot;menu-lateral&quot;&gt;&lt;/aside&gt;
+            &lt;h2&gt;Menu&lt;/h2&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;item 3&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;header class=&quot;cabecalho&quot;&gt;
+            &lt;h1&gt;Meu site&lt;/h1&gt;
+            &lt;button class=&quot;btn-animate&quot;&gt;CLIQUE AQUI&lt;/button&gt;
+    &lt;/header&gt;
+    &lt;main class=&quot;principal&quot;&gt;
+        &lt;div class=&quot;content-box&quot;&gt;Conteudo 1&lt;/div&gt;
+        &lt;div class=&quot;content-box&quot;&gt;Conteudo 2&lt;/div&gt;
+        &lt;div class=&quot;content-box&quot;&gt;Conteudo 3&lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+ 
+CSS:
+/* Layout base com Grid */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-areas:
+        &quot;menu cabecalho&quot;
+        &quot;menu principal&quot;;
+    grid-template-columns: 200px 1fr;
+    gap: 10px;
+
+}
+/* Menu Lateral */
+.menu-lateral {
+    grid-area: menu;
+    background-color: #f0f0f0;
+    padding: 15px;
+}
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+.menu-lateral li {
+    margin: 10px 0;
+}
+.menu-lateral a {
+    text-decoration: none;
+    color: #333;
+}
+/* Cabeçalho */
+.cabecalho {
+    grid-area: cabecalho;
+    background: linear-gradient(90deg, #007bff, #00d084);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecalho h1 {
+    margin: 0;
+}
+/* Botão com Transição e Animação */
+.btn-animate {
+    background-color: #fff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-animate:hover {
+    background-color: #007bff;
+    color: white;
+
+}
+/* Conteúdo Principal */
+.principal {
+    grid-area: principal;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+}
+.content-box {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+    animation: slideIn 0.5s ease-out;
+}
+/* Animação */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            &quot;cabecalho&quot;
+            &quot;principal&quot;;
+    }
+    .menu-lateral {
+        display: none;
+    }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+    body {
+        grid-template-columns: 180px 1fr;
+    }
+    .menu-lateral {
+
+        width: 180px;
+    }
+}

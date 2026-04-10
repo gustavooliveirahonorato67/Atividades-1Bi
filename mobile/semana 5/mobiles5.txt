@@ -1,0 +1,7 @@
+Imagine que seu aplicativo precisa buscar todas as tarefas armazenadas no servidor. Descreva como você faria essa requisição HTTP (método, URL, cabeçalhos). Para buscar todas as tarefas, eu utilizaria o método GET. A URL seria o endereço do recurso no servidor, como api.exemplo.com/tarefas , e os cabeçalhos incluiriam o "Accept: application/json" para indicar o formato de dados desejado. 
+
+Agora, suponha que você precise enviar uma nova tarefa ao servidor. Qual método HTTP você utilizaria? Descreva os componentes da requisição, incluindo o corpo da requisição com um exemplo de tarefa. Eu utilizaria o método POST. Os componentes seriam a URL do recurso , o cabeçalho "Content-Type: application/json" e o corpo (body) contendo os dados da nova tarefa.
+
+Formato de Dados: JSON
+
+{ "tarefa": "Comprar leite", "prioridade": "Alta", "data_conclusao": "2024-09-10" }
