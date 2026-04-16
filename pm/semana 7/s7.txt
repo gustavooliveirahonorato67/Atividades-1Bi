@@ -1,0 +1,104 @@
+RESOLUÇÃO:
+
+ 
+Diante da saída inesperada de um membro-chave da equipe, é fundamental agir de forma estratégica para minimizar os impactos no andamento das atividades. O primeiro passo é analisar as responsabilidades que ficaram em aberto e redistribuí-las entre os integrantes, levando em consideração as habilidades e limitações de cada um. Em seguida, deve-se identificar possíveis lacunas de conhecimento e, se necessário, promover treinamentos rápidos ou suporte interno para garantir a continuidade do trabalho. Além disso, é essencial priorizar as tarefas mais urgentes e importantes, evitando sobrecarga desnecessária e mantendo o foco nos objetivos principais do projeto. A comunicação clara e constante entre os membros da equipe também é indispensável, pois ajuda a alinhar expectativas, reduzir erros e manter o engajamento de todos. Por fim, sempre que possível, deve-se considerar a busca por um substituto, seja por meio de recrutamento externo ou realocação interna, para restabelecer o equilíbrio da equipe a longo prazo.
+ 
+Tarefas
+Tarefa 1
+Tarefa: Pesquisar ideias de formatura
+Atribuído para: Grupo
+Custo: R$ 50,00
+Progresso: 100%
+Início: 09/12/2024
+Término: 15/12/2024
+Tarefa 2
+Tarefa: Definir como vai ser a formatura
+Atribuído para: Yaz
+Custo: R$ 0,00
+Progresso: 100%
+Início: 16/12/2024
+Término: 17/12/2024
+Tarefa 3
+Tarefa: Escolher o local
+Atribuído para: Integrante 2
+Custo: R$ 1.000,00
+Progresso: 50%
+Início: 18/12/2024
+Término: 20/12/2024
+Tarefa 4
+Tarefa: Escolher o tema da festa
+Atribuído para: Grupo
+Custo: R$ 100,00
+Progresso: 50%
+Início: 21/12/2024
+Término: 22/12/2024
+Tarefa 5
+Tarefa: Dividir tarefas
+Atribuído para: Grupo
+Custo: R$ 0,00
+Progresso: 100%
+Início: 23/12/2024
+Término: 23/12/2024
+Tarefa 6
+Tarefa: Planejar decoração
+Atribuído para: Integrante 3
+Custo: R$ 300,00
+Progresso: 25%
+Início: 26/12/2024
+Término: 29/12/2024
+Tarefa 7
+Tarefa: Criar convites
+Atribuído para: Integrante 4
+Custo: R$ 150,00
+Progresso: 25%
+Início: 30/12/2024
+Término: 01/01/2025
+Tarefa 8
+Tarefa: Organizar cerimônia
+Atribuído para: Grupo
+Custo: R$ 200,00
+Progresso: 0%
+Início: 02/01/2025
+Término: 05/01/2025
+Tarefa 9
+Tarefa: Músicas e falas
+Atribuído para: Yaz
+Custo: R$ 50,00
+Progresso: 0%
+Início: 06/01/2025
+Término: 07/01/2025
+Tarefa 10
+Tarefa: Revisar planejamento
+Atribuído para: Grupo
+Custo: R$ 0,00
+Progresso: 0%
+Início: 08/01/2025
+Término: 09/01/2025
+Tarefa 11
+Tarefa: Ajustes
+Atribuído para: Grupo
+Custo: R$ 50,00
+Progresso: 0%
+Início: 10/01/2025
+Término: 11/01/2025
+Tarefa 12
+Tarefa: Preparar apresentação
+Atribuído para: Grupo
+Custo: R$ 100,00
+Progresso: 0%
+Início: 13/01/2025
+Término: 15/01/2025
+Tarefa 13
+Tarefa: Ensaiar
+Atribuído para: Grupo
+Custo: R$ 0,00
+Progresso: 0%
+Início: 16/01/2025
+Término: 17/01/2025
+Tarefa 14
+Tarefa: Apresentar
+Atribuído para: Grupo
+Custo: R$ 50,00
+Progresso: 0%
+Início: 20/01/2025
+Término: 20/01/2025
